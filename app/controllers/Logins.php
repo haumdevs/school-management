@@ -51,14 +51,19 @@
                     $user = $this->userModel->getUserByEmail($data['user_email']);
                     if($user->user_position = 'Admin') {
                         
-                        redirect('admin');
+                        // echo URLROOT;
+                        redirect('admins/index');
                     } elseif($user->user_position = 'Teacher') {
-                        redirect('teacher');
+                        // echo URLROOT;
+                        redirect('teachers/index');
                     } else {
-                        redirect('student');
-                    }                 
+                        // echo URLROOT;
+                        redirect('student/index');
+                    } 
+                    echo 'Verified';                
                 } else {
-                    //Reload the form with incorrect data
+                    // Reload the form with incorrect data
+                    // echo 'You is a dumb bitch';
                     $this->view('logins/login', $data);
                 }
 

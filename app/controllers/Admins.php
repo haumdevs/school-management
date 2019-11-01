@@ -5,6 +5,6 @@
         }
 
         public function index() {
-            $this->view('Admin/index');
+            $this->view('Admins/index');
         }
     }
